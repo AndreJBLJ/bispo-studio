@@ -16,8 +16,9 @@
   --on-indigo-muted: #e2dbff;
   --on-mint: #01010d;
 
-  --font-display: "Libre Franklin", system-ui, sans-serif;
-  --font-text: "Source Serif 4", Georgia, serif;
+  /* Archivo para interface e texto (inclusive a calculadora do Precifica). */
+  --font-display: var(--font-sans), system-ui, sans-serif;
+  --font-text: var(--font-sans), system-ui, sans-serif;
 
   /* Cinco degraus de tipo, e o monumento à parte */
   --step-small: clamp(0.875rem, 0.85rem + 0.1vw, 0.9375rem);

@@ -1,29 +1,19 @@
 import type { Metadata, Viewport } from "next";
-import { Libre_Franklin, Source_Serif_4 } from "next/font/google";
+import { Anton, Archivo, Bodoni_Moda } from "next/font/google";
 import "./globals.css";
 
-const display = Libre_Franklin({
-  subsets: ["latin"],
-  weight: ["700"],
-  variable: "--font-display",
-  display: "swap",
-});
-
-const text = Source_Serif_4({
-  subsets: ["latin"],
-  weight: ["400", "600"],
-  style: ["normal", "italic"],
-  variable: "--font-text",
-  display: "swap",
-});
+const caps = Anton({ subsets: ["latin"], weight: "400", variable: "--font-caps", display: "swap" });
+const serif = Bodoni_Moda({ subsets: ["latin"], style: ["italic"], weight: ["400", "500"], variable: "--font-serif", display: "swap" });
+const sans = Archivo({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--font-sans", display: "swap" });
 
 export const metadata: Metadata = {
-  title: "Bispo Studio | Sites e lojas para quem vende impressão 3D",
+  metadataBase: new URL("https://bispo-studio.vercel.app"),
+  title: "Bispo Studio | Sites para quem imprime e vende peças em 3D",
   description:
     "Sites e lojas virtuais para quem vende impressão 3D, feitos pelo André, que também vende peça impressa. Planos a partir de R$ 1.100 e o Precifica 3D para calcular o preço certo.",
   openGraph: {
     title: "Bispo Studio",
-    description: "Sites e lojas para quem vende impressão 3D.",
+    description: "Sites para quem imprime e vende peças em 3D.",
     locale: "pt_BR",
     type: "website",
   },
@@ -36,7 +26,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-BR" className={`${display.variable} ${text.variable}`} suppressHydrationWarning>
+    <html lang="pt-BR" className={`${caps.variable} ${serif.variable} ${sans.variable}`} suppressHydrationWarning>
       <head>
         {/* Marca que o JavaScript existe antes da primeira pintura: só então o CSS esconde o que vai entrar animado. */}
         <script

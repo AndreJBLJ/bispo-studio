@@ -2,22 +2,22 @@
 version: 1
 slug: "site-app-page-tsx"
 primary_target: "site/app/page.tsx"
-related_targets: ["site/app/estudio/page.tsx"]
+related_targets: ["site/components/luz/Luz.tsx"]
 ---
 
 ## Scope
-Landing do Bispo Studio, modo Persuade. Duas versões para o dono decidir depois (pedido em 2026-11-04): `/` = "Camada por camada" (direção sorteada), `/estudio` = padrão de estúdio (canon, executado com rigor). Mesmo conteúdo, mesmas cores.
+Landing do Bispo Studio, modo Persuade. Página única em `/` (versão "Luz", escolhida pelo dono em 2026-11-04 entre três prévias). As versões "Camada por camada" e "Padrão de estúdio" foram retiradas do site e ficam no histórico do Git.
 
 ## Audience, job, action
-Quem vende impressão 3D e quer um site próprio. Precisa entender os 3 planos, ver as lojas reais do André e chamar no WhatsApp (11 97712-2310). Ação principal: "Pedir orçamento no WhatsApp" com mensagem pronta do plano escolhido. Ação secundária: Precifica 3D (R$ 19,90/mês em 12 meses ou R$ 29,90/mês; bônus para quem fecha 12 meses de mensalidade).
+Quem vende impressão 3D e quer um site próprio. Precisa entender os 3 planos, ver as lojas reais do André e chamar no WhatsApp (11 97712-2310). Ação principal: "Pedir orçamento" (WhatsApp com mensagem pronta, por plano). Ação secundária: Precifica 3D (R$ 19,90/mês em 12 meses ou R$ 29,90/mês; bônus para quem fecha 12 meses de mensalidade).
 
 ## Proof
-Bispo TCG e Bispo Decorações (prints reais, fotos reais dos produtos, modelo 3D do Torsa), Precifica 3D (interface real + calculadora com a fórmula real). Nada de depoimentos ou números inventados.
+Bispo TCG e Bispo Decorações (prints reais e fotos reais das peças), Precifica 3D (calculadora com a fórmula real). Fotos de impressoras enviadas pelo dono (divulgação Bambu Lab e Creality). Nada de depoimentos ou números inventados.
 
 ## Direction contract
-THESIS: A camada de impressão FDM, como toda peça que esse público vende é feita, vira a forma de revelar o site: o nome BISPO STUDIO e cada seção sobem de baixo para cima, camada por camada, com uma linha mint como bico. Recusa o split hero com mockup + três cards de plano.
-OWN-WORLD: Chão Onyx #01010d, campos inteiros Electric Indigo #6331fb (estágio de preço, Precifica, chamada final), Tropical Mint #88f9c0 só no bico, no botão e na barra de custo. Libre Franklin 700 em caixa alta gigante, Source Serif 4 para leitura. Cantos retos, sem linhas finas, sem sombras.
-STORY: Vê o nome sendo impresso, entende "sites e lojas para quem vende impressão 3D", vê as duas lojas do André partidas na costura, entende os planos com preço vivo, testa o Precifica, tira dúvidas, chama no WhatsApp.
-FIRST VIEWPORT: BISPO / STUDIO em duas linhas a ~19vw, ancorado na base, com a foto do Torsa aceso no lugar do O de STUDIO; bico mint varre as camadas no carregamento. Canto superior esquerdo: h1 de apoio "Sites e lojas para quem vende impressão 3D" a 20px + botão mint "Pedir orçamento". Canto superior direito: três links.
-FORM: Name as monument (taste-skill seed 998130822), candidato 3 da lista própria ("estratos de camada"); seed: f4a7c01922780075. Assinatura: impressão por camadas (clip-path em degraus + bico). Live thing: calculadora Precifica com fórmula real. Torsa impresso em WebGL por plano de corte no scroll.
+THESIS: A luz de estúdio da referência do dono vira a vitrine da impressora: a máquina que o cliente usa no dia a dia aparece no centro, iluminada como retrato, e a frase "SITES para quem imprime E VENDE peças em 3D" a cerca. Recusa o split hero com mockup e a grade de cards de plano.
+OWN-WORLD: Fundo índigo iluminado (#6331fb em gradiente radial até Onyx #01010d), contraluz Tropical Mint (#88f9c0) em botões pílula, rótulos e marcadores. Caixa alta condensada (Anton) misturada com itálico serifado (Bodoni Moda), interface em Archivo; listas com linhas finas a 18% de opacidade; cantos arredondados só em pílulas, fotos e no campo do Precifica.
+STORY: Vê a impressora iluminada e a frase, entende para quem é, vê as lojas do André correndo de lado, entende os planos lado a lado, testa o Precifica, tira dúvidas e chama no WhatsApp.
+FIRST VIEWPORT: Impressora no centro (cerca de 86% da altura, revezando três máquinas a cada 4,2 s), "SITES / para quem imprime" no alto à esquerda, "E VENDE / peças em 3D" à direita e mais abaixo, texto de apoio e pílula mint "Pedir orçamento" embaixo à esquerda, lista de quatro garantias embaixo à direita, faixa "Testado nas minhas lojas com" centrada no rodapé da tela.
+FORM: Referência fixada pelo dono (imagem enviada em 2026-11-04), não sorteada; seed: none (unavailable). Assinatura: impressoras revezando com o filtro de luz (multiplicação sobre o índigo, contraluz mint). Movimento: palavras dos títulos entrando (caixa alta sobe da linha, itálico chega de lado desfocando), luz que passeia entre as seções, lojas em corredor horizontal preso no scroll.
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance

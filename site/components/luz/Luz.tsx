@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useMotionValue, useReducedMotion, useSpring, useTransform } from "motion/react";
 import { gsap } from "gsap";
@@ -24,14 +23,14 @@ import s from "./luz.module.css";
 gsap.registerPlugin(ScrollTrigger);
 
 /**
- * Impressoras que revezam no centro do topo (public/impressoras/, 1300 × 1625, fundo branco puro, apoiadas na base
- * do quadro). Não precisa recortar: o filtro multiplica a foto pela luz índigo, então o branco vira a própria luz
- * e só a impressora aparece. Para trocar, mantenha o mesmo formato e liste aqui.
+ * Impressoras que revezam no centro do topo (public/impressoras/*-luz.webp, 1300 × 1625, fundo transparente,
+ * apoiadas na base do quadro). Já saem iluminadas: tons de lilás, contraluz mint na borda direita e brilho suave.
+ * Geradas a partir das fotos do dono com o script descrito em DESIGN.md; para trocar, mantenha o mesmo formato.
  */
 const FOTOS_TOPO = [
-  { src: "/impressoras/bambu-h3c.webp", alt: "Impressora 3D Bambu Lab H3C com o sistema de filamentos no topo" },
-  { src: "/impressoras/creality-k1c.webp", alt: "Impressora 3D Creality K1C imprimindo uma peça" },
-  { src: "/impressoras/bambu-a1-mini.webp", alt: "Impressora 3D Bambu Lab A1 mini imprimindo um vaso" },
+  { src: "/impressoras/bambu-h3c-luz.webp", alt: "Impressora 3D Bambu Lab H3C com o sistema de filamentos no topo" },
+  { src: "/impressoras/creality-k1c-luz.webp", alt: "Impressora 3D Creality K1C imprimindo uma peça" },
+  { src: "/impressoras/bambu-a1-mini-luz.webp", alt: "Impressora 3D Bambu Lab A1 mini imprimindo um vaso" },
 ];
 
 const Arrow = () => (
@@ -148,16 +147,15 @@ function Subject({ fotos, interval = 4200, className }: { fotos: typeof FOTOS_TO
   const f = fotos[i];
   return (
     <motion.div className={`${s.subject} ${className ?? ""}`} style={{ x }} aria-live="off">
-      <span className={s.rim} aria-hidden="true" />
       <AnimatePresence initial={false}>
         <motion.img
           key={f.src}
           src={f.src}
           alt={f.alt}
           className={s.subjectImg}
-          initial={reduce ? { opacity: 0 } : { opacity: 0, scale: 1.06, filter: "grayscale(1) contrast(1.2) blur(12px)" }}
-          animate={{ opacity: 1, scale: 1, filter: "grayscale(1) contrast(1.2) blur(0px)" }}
-          exit={reduce ? { opacity: 0 } : { opacity: 0, scale: 0.97, filter: "grayscale(1) contrast(1.2) blur(8px)" }}
+          initial={reduce ? { opacity: 0 } : { opacity: 0, scale: 1.05, filter: "blur(12px)" }}
+          animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+          exit={reduce ? { opacity: 0 } : { opacity: 0, scale: 0.97, filter: "blur(8px)" }}
           transition={{ duration: 1.1, ease: [0.23, 1, 0.32, 1] }}
         />
       </AnimatePresence>
@@ -210,10 +208,10 @@ function Hero() {
       <div className={s.tools} data-hero-in>
         <p className={s.toolsLabel}>Testado nas minhas lojas com</p>
         <ul className={s.toolsRow}>
-          <li className={s.tSans}>Mercado Pago</li>
-          <li className={s.tSerif}>Pix</li>
-          <li className={s.tCaps}>SuperFrete</li>
-          <li className={s.tSans}>Vercel</li>
+          <li>Mercado Pago</li>
+          <li>Pix</li>
+          <li>SuperFrete</li>
+          <li>Vercel</li>
         </ul>
       </div>
     </section>
@@ -268,7 +266,9 @@ function Lojas() {
             Antes de oferecer qualquer coisa, eu testo nas minhas próprias lojas de impressão 3D. Estas duas estão no ar e
             vendendo.
           </p>
-          <p className={s.capsSmall}>Role para o lado →</p>
+          <p className={`${s.capsSmall} ${s.sideHint}`} aria-hidden="true">
+            Role para o lado <Arrow />
+          </p>
         </div>
 
         {PROJETOS.map((p) => (
@@ -399,13 +399,11 @@ function Planos() {
       </ul>
       <div className={s.terms} data-reveal>
         <div>
-          <p className={s.capsSmall}>A mensalidade cobre</p>
-          <p className={s.termsBig}>{MENSALIDADE.cobre.join(" · ")}</p>
+          <p className={s.termsBig}>A mensalidade cobre hospedagem, domínio, cópia de segurança e pequenas alterações.</p>
           <p className={s.muted}>{MENSALIDADE.nota}</p>
         </div>
         <div>
-          <p className={s.capsSmall}>Como você paga</p>
-          <p className={s.termsBig}>50% para começar, 50% com o site no ar.</p>
+          <p className={s.termsBig}>Você paga 50% para começar e 50% com o site no ar.</p>
           <p className={s.muted}>{PAGAMENTO} Pix, cartão e frete pelo CEP existem só no plano Loja.</p>
         </div>
       </div>
@@ -513,15 +511,9 @@ function Fecho() {
                 </a>
               </li>
             ))}
-            <li>
-              <Link href="/">Versão Camada por camada</Link>
-            </li>
-            <li>
-              <Link href="/estudio">Versão Padrão de estúdio</Link>
-            </li>
           </ul>
         </div>
-        <p className={s.legal}>© 2026 Bispo Studio · Santo André, SP · Fotos e modelos das lojas Bispo TCG e Bispo Decorações, do próprio André.</p>
+        <p className={s.legal}>© 2026 Bispo Studio · Santo André, SP · Fotos das lojas Bispo TCG e Bispo Decorações, do próprio André.</p>
       </footer>
     </>
   );
@@ -563,7 +555,7 @@ export function Luz() {
         const tl = gsap.timeline({ delay });
         tl.fromTo(
           t.querySelectorAll(`.${s.b}`),
-          { yPercent: 110 },
+          { yPercent: 135 },
           { yPercent: 0, duration: 1.05, ease: "expo.out", stagger: 0.12 },
         ).fromTo(
           t.querySelectorAll(`.${s.i}`),
@@ -584,7 +576,7 @@ export function Luz() {
       );
       titles.forEach((t) => {
         if (t.closest(`.${s.hero}`)) return;
-        gsap.set(t.querySelectorAll(`.${s.b}`), { yPercent: 110 });
+        gsap.set(t.querySelectorAll(`.${s.b}`), { yPercent: 135 });
         gsap.set(t.querySelectorAll(`.${s.i}`), { autoAlpha: 0 });
         io.observe(t);
       });
