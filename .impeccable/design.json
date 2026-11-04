@@ -1,0 +1,461 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-04T00:00:00Z",
+  "title": "Design System: Bispo Studio",
+  "extensions": {
+    "colorMeta": {
+      "electric-indigo": {
+        "role": "primary",
+        "displayName": "Electric Indigo",
+        "tonalRamp": [
+          "oklch(15% 0.123 285)",
+          "oklch(25% 0.155 285)",
+          "oklch(35% 0.186 285)",
+          "oklch(45% 0.218 285)",
+          "oklch(58% 0.24 285)",
+          "oklch(70% 0.202 285)",
+          "oklch(82% 0.164 285)",
+          "oklch(95% 0.123 285)"
+        ]
+      },
+      "indigo-highlight": {
+        "role": "primary",
+        "displayName": "Indigo Highlight",
+        "tonalRamp": [
+          "oklch(15% 0.108 290)",
+          "oklch(25% 0.136 290)",
+          "oklch(35% 0.164 290)",
+          "oklch(45% 0.192 290)",
+          "oklch(58% 0.212 290)",
+          "oklch(70% 0.178 290)",
+          "oklch(82% 0.144 290)",
+          "oklch(95% 0.108 290)"
+        ]
+      },
+      "indigo-deep": {
+        "role": "primary",
+        "displayName": "Indigo Deep",
+        "tonalRamp": [
+          "oklch(15% 0.098 283)",
+          "oklch(25% 0.124 283)",
+          "oklch(35% 0.149 283)",
+          "oklch(45% 0.175 283)",
+          "oklch(58% 0.192 283)",
+          "oklch(70% 0.162 283)",
+          "oklch(82% 0.131 283)",
+          "oklch(95% 0.098 283)"
+        ]
+      },
+      "indigo-night": {
+        "role": "primary",
+        "displayName": "Indigo Night",
+        "tonalRamp": [
+          "oklch(15% 0.059 285)",
+          "oklch(25% 0.074 285)",
+          "oklch(35% 0.089 285)",
+          "oklch(45% 0.105 285)",
+          "oklch(58% 0.115 285)",
+          "oklch(70% 0.097 285)",
+          "oklch(82% 0.079 285)",
+          "oklch(95% 0.059 285)"
+        ]
+      },
+      "tropical-mint": {
+        "role": "secondary",
+        "displayName": "Tropical Mint",
+        "tonalRamp": [
+          "oklch(15% 0.069 160)",
+          "oklch(25% 0.087 160)",
+          "oklch(35% 0.104 160)",
+          "oklch(45% 0.122 160)",
+          "oklch(58% 0.135 160)",
+          "oklch(70% 0.113 160)",
+          "oklch(82% 0.092 160)",
+          "oklch(95% 0.069 160)"
+        ]
+      },
+      "mint-press": {
+        "role": "secondary",
+        "displayName": "Mint Press",
+        "tonalRamp": [
+          "oklch(15% 0.074 158)",
+          "oklch(25% 0.093 158)",
+          "oklch(35% 0.112 158)",
+          "oklch(45% 0.131 158)",
+          "oklch(58% 0.144 158)",
+          "oklch(70% 0.121 158)",
+          "oklch(82% 0.098 158)",
+          "oklch(95% 0.074 158)"
+        ]
+      },
+      "onyx-black": {
+        "role": "neutral",
+        "displayName": "Onyx Black",
+        "tonalRamp": [
+          "oklch(15% 0.015 280)",
+          "oklch(25% 0.019 280)",
+          "oklch(35% 0.022 280)",
+          "oklch(45% 0.026 280)",
+          "oklch(58% 0.029 280)",
+          "oklch(70% 0.024 280)",
+          "oklch(82% 0.02 280)",
+          "oklch(95% 0.015 280)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Surface",
+        "tonalRamp": [
+          "oklch(15% 0.015 280)",
+          "oklch(25% 0.019 280)",
+          "oklch(35% 0.022 280)",
+          "oklch(45% 0.026 280)",
+          "oklch(58% 0.029 280)",
+          "oklch(70% 0.024 280)",
+          "oklch(82% 0.02 280)",
+          "oklch(95% 0.015 280)"
+        ]
+      },
+      "surface-raised": {
+        "role": "neutral",
+        "displayName": "Surface Raised",
+        "tonalRamp": [
+          "oklch(15% 0.02 280)",
+          "oklch(25% 0.025 280)",
+          "oklch(35% 0.03 280)",
+          "oklch(45% 0.035 280)",
+          "oklch(58% 0.038 280)",
+          "oklch(70% 0.032 280)",
+          "oklch(82% 0.026 280)",
+          "oklch(95% 0.02 280)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "tonalRamp": [
+          "oklch(15% 0.01 285)",
+          "oklch(25% 0.012 285)",
+          "oklch(35% 0.015 285)",
+          "oklch(45% 0.017 285)",
+          "oklch(58% 0.019 285)",
+          "oklch(70% 0.016 285)",
+          "oklch(82% 0.013 285)",
+          "oklch(95% 0.01 285)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted",
+        "tonalRamp": [
+          "oklch(15% 0.02 285)",
+          "oklch(25% 0.025 285)",
+          "oklch(35% 0.03 285)",
+          "oklch(45% 0.035 285)",
+          "oklch(58% 0.038 285)",
+          "oklch(70% 0.032 285)",
+          "oklch(82% 0.026 285)",
+          "oklch(95% 0.02 285)"
+        ]
+      },
+      "on-indigo": {
+        "role": "neutral",
+        "displayName": "On Indigo",
+        "tonalRamp": [
+          "oklch(15% 0.0 285)",
+          "oklch(25% 0.0 285)",
+          "oklch(35% 0.0 285)",
+          "oklch(45% 0.0 285)",
+          "oklch(58% 0.0 285)",
+          "oklch(70% 0.0 285)",
+          "oklch(82% 0.0 285)",
+          "oklch(95% 0.0 285)"
+        ]
+      },
+      "on-indigo-muted": {
+        "role": "neutral",
+        "displayName": "On Indigo Muted",
+        "tonalRamp": [
+          "oklch(15% 0.025 290)",
+          "oklch(25% 0.031 290)",
+          "oklch(35% 0.037 290)",
+          "oklch(45% 0.044 290)",
+          "oklch(58% 0.048 290)",
+          "oklch(70% 0.04 290)",
+          "oklch(82% 0.033 290)",
+          "oklch(95% 0.025 290)"
+        ]
+      },
+      "on-mint": {
+        "role": "neutral",
+        "displayName": "On Mint",
+        "tonalRamp": [
+          "oklch(15% 0.015 280)",
+          "oklch(25% 0.019 280)",
+          "oklch(35% 0.022 280)",
+          "oklch(45% 0.026 280)",
+          "oklch(58% 0.029 280)",
+          "oklch(70% 0.024 280)",
+          "oklch(82% 0.02 280)",
+          "oklch(95% 0.015 280)"
+        ]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "tonalRamp": [
+          "oklch(15% 0.01 285)",
+          "oklch(25% 0.012 285)",
+          "oklch(35% 0.015 285)",
+          "oklch(45% 0.017 285)",
+          "oklch(58% 0.019 285)",
+          "oklch(70% 0.016 285)",
+          "oklch(82% 0.013 285)",
+          "oklch(95% 0.01 285)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "hero-caps": {
+        "displayName": "Hero",
+        "purpose": "Só as palavras em caixa alta do topo, em volta da impressora."
+      },
+      "display-caps": {
+        "displayName": "Display caixa alta",
+        "purpose": "Metade de cima de todo título de seção."
+      },
+      "display-italic": {
+        "displayName": "Display itálico",
+        "purpose": "Metade de baixo de todo título de seção."
+      },
+      "title-caps": {
+        "displayName": "Título caixa alta",
+        "purpose": "Nome e preço dos planos."
+      },
+      "title-italic": {
+        "displayName": "Título itálico",
+        "purpose": "Para quê de cada plano, termos, preços do Precifica."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Parágrafo de abertura, máximo 44ch."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Texto corrido."
+      },
+      "label": {
+        "displayName": "Rótulo",
+        "purpose": "Navegação, itens de lista de linha fina, rótulos mint."
+      },
+      "label-small": {
+        "displayName": "Rótulo pequeno",
+        "purpose": "Subtítulo do logo e faixa de ferramentas."
+      },
+      "button": {
+        "displayName": "Botão",
+        "purpose": "Texto das pílulas."
+      }
+    },
+    "gradients": [
+      {
+        "name": "lit",
+        "value": "radial-gradient(ellipse 62% 72% at 52% 30%, #8d60ff 0%, #6331fb 36%, #3b17b4 66%, #13063b 100%)",
+        "purpose": "Luz de estúdio: topo, plano em destaque, Precifica, fecho."
+      },
+      {
+        "name": "hero-fade",
+        "value": "linear-gradient(to bottom, rgba(1,1,13,0) 0%, rgba(1,1,13,0.78) 72%, #01010d 100%)",
+        "purpose": "Últimos 26% do topo, passando a luz para o Onyx."
+      },
+      {
+        "name": "roaming-light",
+        "value": "radial-gradient(circle at center, var(--c) 0%, transparent 58%)",
+        "purpose": "Luz fixa de 110vmax que passeia atrás das seções (índigo; mint a 38% no Precifica)."
+      }
+    ],
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.23, 1, 0.32, 1)",
+        "purpose": "Padrão de estados, setas, sublinhados, FAQ."
+      },
+      {
+        "name": "ease-in-out",
+        "value": "cubic-bezier(0.77, 0, 0.175, 1)",
+        "purpose": "Token global disponível."
+      },
+      {
+        "name": "press",
+        "value": "transform scale(0.97) 160ms ease-out",
+        "purpose": "Pressionar pílulas e botões."
+      },
+      {
+        "name": "arrow-nudge",
+        "value": "translateX(5px) 260ms ease-out",
+        "purpose": "Seta das pílulas e das opções no hover."
+      },
+      {
+        "name": "caps-rise",
+        "value": "yPercent 100 -> 0, 1.05s expo.out, stagger 0.12s",
+        "purpose": "Caixa alta sobe de dentro da linha mascarada."
+      },
+      {
+        "name": "italic-arrive",
+        "value": "x 48px + blur(10px) -> 0, 1.1s expo.out, stagger 0.12s",
+        "purpose": "Itálico chega de lado saindo do desfoque."
+      },
+      {
+        "name": "light-move",
+        "value": "1.4s power3.inOut",
+        "purpose": "Luz que passeia muda de posição ao entrar cada seção."
+      },
+      {
+        "name": "printer-swap",
+        "value": "opacity + scale 1.05 + blur(12px), 1.1s ease-out, a cada 4.2s",
+        "purpose": "Revezamento das impressoras do topo."
+      },
+      {
+        "name": "faq-open",
+        "value": "grid-template-rows 0fr -> 1fr 380ms ease-out",
+        "purpose": "Abrir resposta."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "nav-collapse",
+        "value": "1100px"
+      },
+      {
+        "name": "stack",
+        "value": "959px"
+      },
+      {
+        "name": "mobile",
+        "value": "759px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Pílula mint",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Ação principal: Pedir orçamento, chamar no WhatsApp.",
+      "html": "<div class=\"ds-wrap\"><a class=\"ds-pill\" href=\"#\">Pedir orçamento <svg class=\"ds-arrow\" width=\"20\" height=\"12\" viewBox=\"0 0 20 12\" fill=\"none\" aria-hidden=\"true\"><path d=\"M0 6h18M13 1l5 5-5 5\" stroke=\"currentColor\" stroke-width=\"1.6\"/></svg></a></div>",
+      "css": ".ds-wrap{background:#01010d;color:#eeedfb;font-family:Archivo,system-ui,sans-serif;padding:24px}.ds-pill{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:56px;padding:0 28px;border-radius:999px;font-family:Archivo,system-ui,sans-serif;font-weight:700;font-size:0.9375rem;text-transform:uppercase;letter-spacing:0.04em;text-decoration:none;transition:transform 160ms cubic-bezier(0.23,1,0.32,1),background-color 220ms ease,color 220ms ease;cursor:pointer;background:#88f9c0;color:#01010d;border:0}.ds-pill:hover{background:#6fefad}.ds-pill:hover .ds-arrow{transform:translateX(5px)}.ds-pill:active{transform:scale(0.97)}.ds-pill:focus-visible{outline:3px solid #88f9c0;outline-offset:3px}.ds-arrow{transition:transform 260ms cubic-bezier(0.23,1,0.32,1)}"
+    },
+    {
+      "name": "Pílula de contorno",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Ação secundária: ver a loja no ar, plano não destacado, barra do topo.",
+      "html": "<div class=\"ds-wrap\"><a class=\"ds-pill-line\" href=\"#\">Ver a loja no ar <svg class=\"ds-arrow\" width=\"20\" height=\"12\" viewBox=\"0 0 20 12\" fill=\"none\" aria-hidden=\"true\"><path d=\"M0 6h18M13 1l5 5-5 5\" stroke=\"currentColor\" stroke-width=\"1.6\"/></svg></a></div>",
+      "css": ".ds-wrap{background:#01010d;color:#eeedfb;font-family:Archivo,system-ui,sans-serif;padding:24px}.ds-pill-line{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:56px;padding:0 28px;border-radius:999px;font-family:Archivo,system-ui,sans-serif;font-weight:700;font-size:0.9375rem;text-transform:uppercase;letter-spacing:0.04em;text-decoration:none;transition:transform 160ms cubic-bezier(0.23,1,0.32,1),background-color 220ms ease,color 220ms ease;cursor:pointer;background:transparent;color:#eeedfb;border:1.5px solid #88f9c0}.ds-pill-line:hover{background:#88f9c0;color:#01010d}.ds-pill-line:hover .ds-arrow{transform:translateX(5px)}.ds-pill-line:active{transform:scale(0.97)}.ds-pill-line:focus-visible{outline:3px solid #88f9c0;outline-offset:3px}.ds-arrow{transition:transform 260ms cubic-bezier(0.23,1,0.32,1)}"
+    },
+    {
+      "name": "Etiqueta",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "Marca o plano em destaque.",
+      "html": "<div class=\"ds-wrap\"><span class=\"ds-tag\">Mais completa</span></div>",
+      "css": ".ds-wrap{background:#01010d;color:#eeedfb;font-family:Archivo,system-ui,sans-serif;padding:24px}.ds-tag{display:inline-block;background:#88f9c0;color:#01010d;border-radius:999px;padding:6px 12px;font-size:0.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em}"
+    },
+    {
+      "name": "Navegação",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Barra fixa com logo, links em caixa alta espaçada e sublinhado mint que cresce.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-logo\" href=\"#\"><span class=\"ds-logo-name\">Bispo Studio<span class=\"ds-dot\">.</span></span><span class=\"ds-logo-sub\">Sites para impressão 3D</span></a><div class=\"ds-links\"><a href=\"#\">Lojas</a><a href=\"#\">Planos</a><a href=\"#\">Precifica 3D</a><a href=\"#\">Dúvidas</a></div></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;justify-content:space-between;gap:24px;height:72px;padding:0 24px;background:rgba(1,1,13,0.92);font-family:Archivo,system-ui,sans-serif}.ds-logo{display:grid;text-decoration:none}.ds-logo-name{font-weight:700;font-size:1.625rem;letter-spacing:-0.03em;line-height:1.1;color:#fff}.ds-dot{color:#88f9c0}.ds-logo-sub{font-size:0.6875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.2em;color:#e2dbff}.ds-links{display:flex;gap:32px}.ds-links a{position:relative;display:inline-flex;align-items:center;min-height:44px;font-size:0.8125rem;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;text-decoration:none;color:#fff}.ds-links a::after{content:'';position:absolute;left:0;right:0;bottom:8px;height:1.5px;background:#88f9c0;transform:scaleX(0);transform-origin:100% 50%;transition:transform 320ms cubic-bezier(0.23,1,0.32,1)}.ds-links a:hover::after{transform:scaleX(1);transform-origin:0 50%}.ds-links a:focus-visible{outline:3px solid #88f9c0;outline-offset:3px}"
+    },
+    {
+      "name": "Título em par",
+      "kind": "custom",
+      "refersTo": "display-caps",
+      "description": "Todo título de seção: caixa alta condensada em cima, itálico serifado embaixo.",
+      "html": "<div class=\"ds-wrap\"><h2 class=\"ds-title\"><span class=\"ds-b\">Planos</span><span class=\"ds-i\">e preços</span></h2></div>",
+      "css": ".ds-wrap{background:#01010d;color:#eeedfb;font-family:Archivo,system-ui,sans-serif;padding:24px}.ds-title{display:flex;flex-direction:column;margin:0;font-weight:400}.ds-b{font-family:Anton,Impact,sans-serif;text-transform:uppercase;line-height:0.9;letter-spacing:-0.01em;color:#fff;font-size:6rem}.ds-i{font-family:'Bodoni Moda',Georgia,serif;font-style:italic;line-height:1;letter-spacing:-0.02em;color:#fff;font-size:3.5rem;margin-top:-0.06em}"
+    },
+    {
+      "name": "Lista de linhas finas",
+      "kind": "custom",
+      "refersTo": "label",
+      "description": "Garantias, provas e opções em linhas de 1px a 18%, valor em mint à direita.",
+      "html": "<div class=\"ds-wrap\"><ul class=\"ds-lines\"><li><span>Pix e cartão pelo Mercado Pago</span><span>Bispo TCG</span></li><li><span>Frete calculado pelo CEP</span><span>Bispo TCG</span></li><li><span>Peça em 3D girando na página</span><span>As duas</span></li></ul></div>",
+      "css": ".ds-wrap{background:#01010d;color:#eeedfb;font-family:Archivo,system-ui,sans-serif;padding:24px}.ds-lines{list-style:none;margin:0;padding:0;max-width:520px}.ds-lines li{display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-top:1px solid rgba(238,237,251,0.18);font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em}.ds-lines li:last-child{border-bottom:1px solid rgba(238,237,251,0.18)}.ds-lines li span:last-child{color:#88f9c0;white-space:nowrap}"
+    },
+    {
+      "name": "Plano em destaque",
+      "kind": "card",
+      "refersTo": "plan-featured",
+      "description": "Coluna de plano acesa pela luz índigo; os outros planos ficam sem fundo entre linhas finas.",
+      "html": "<div class=\"ds-wrap\"><article class=\"ds-plan\"><div class=\"ds-plan-top\"><h3 class=\"ds-plan-name\">Loja</h3><span class=\"ds-tag\">Mais completa</span></div><p class=\"ds-plan-for\">O cliente escolhe, paga e você só embala.</p><p class=\"ds-plan-price\"><span class=\"ds-from\">a partir de</span>R$ 6.400</p></article></div>",
+      "css": ".ds-wrap{background:#01010d;color:#eeedfb;font-family:Archivo,system-ui,sans-serif;padding:24px}.ds-plan{display:flex;flex-direction:column;gap:22px;padding:36px;max-width:380px;background:radial-gradient(ellipse 62% 72% at 52% 30%, #8d60ff 0%, #6331fb 36%, #3b17b4 66%, #13063b 100%);border-radius:0 0 24px 24px;color:#fff}.ds-plan-top{display:flex;align-items:center;justify-content:space-between;gap:12px}.ds-plan-name{margin:0;font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;font-size:3rem;line-height:1}.ds-tag{background:#88f9c0;color:#01010d;border-radius:999px;padding:6px 12px;font-size:0.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em}.ds-plan-for{margin:0;font-family:'Bodoni Moda',Georgia,serif;font-style:italic;font-size:1.375rem;line-height:1.3}.ds-plan-price{margin:0;display:grid;gap:2px;font-family:Anton,Impact,sans-serif;font-size:4rem;line-height:1}.ds-from{font-family:Archivo,system-ui,sans-serif;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.14em;color:#88f9c0}"
+    },
+    {
+      "name": "Controle da calculadora",
+      "kind": "input",
+      "refersTo": "calculator-field",
+      "description": "Controle deslizante do Precifica: trilho reto, preenchimento mint, alça quadrada.",
+      "html": "<div class=\"ds-wrap\"><label class=\"ds-field\"><span class=\"ds-field-head\"><span>Peso da peça</span><output>120 g</output></span><input type=\"range\" min=\"0\" max=\"100\" value=\"40\" style=\"--p:40%\"></label></div>",
+      "css": ".ds-wrap{background:#01010d;color:#eeedfb;font-family:Archivo,system-ui,sans-serif;padding:24px}.ds-field{display:grid;gap:8px;max-width:420px;font-weight:700;font-size:0.9375rem}.ds-field-head{display:flex;justify-content:space-between;color:#a9a8c8}.ds-field-head output{color:#eeedfb}.ds-field input{-webkit-appearance:none;appearance:none;width:100%;height:28px;margin:0;background:transparent;cursor:pointer}.ds-field input::-webkit-slider-runnable-track{height:8px;background:linear-gradient(#88f9c0,#88f9c0) 0/var(--p) 100% no-repeat,#12122c}.ds-field input::-moz-range-track{height:8px;background:#12122c}.ds-field input::-moz-range-progress{height:8px;background:#88f9c0}.ds-field input::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;margin-top:-7px;background:#eeedfb;border:0;transition:transform 160ms cubic-bezier(0.23,1,0.32,1)}.ds-field input::-moz-range-thumb{width:22px;height:22px;background:#eeedfb;border:0;border-radius:0}.ds-field input:active::-webkit-slider-thumb{transform:scale(1.15)}.ds-field input:focus-visible{outline:3px solid #88f9c0;outline-offset:2px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "O Estúdio de Retrato",
+    "overview": "A página é um estúdio fotográfico montado para a impressora 3D. Um fundo de luz índigo, aceso no alto e no centro, cai até o preto Onyx nas bordas e embaixo. A máquina aparece no meio como quem posa para um retrato. As palavras ficam em volta dela, nunca por cima de um cartão: caixa alta condensada (Anton) que bate forte, emendada com um itálico serifado (Bodoni Moda) que responde baixinho. A interface fica no Archivo: rótulos pequenos em caixa alta espaçada, listas separadas por linhas finas, botões em pílula Tropical Mint.\n\nO mundo foi fixado pelo dono a partir de uma imagem de referência (2026-11-04), não sorteado. O gradiente de luz, as pílulas, os rótulos espaçados e as listas de linha fina são a gramática da casa. A densidade é baixa: blocos grandes de título, muito respiro entre as seções (120 a 220 px) e conteúdo organizado em linhas em vez de caixas.\n\nO movimento faz parte do mundo: a caixa alta sobe de dentro da própria linha, o itálico chega de lado saindo do desfoque, uma luz grande passeia atrás das seções conforme a rolagem e as lojas correm de lado num corredor preso ao scroll. Com `prefers-reduced-motion`, tudo isso para e o corredor vira uma pilha.",
+    "keyCharacteristics": [
+      "Fundo índigo iluminado em gradiente radial, terminando em Onyx Black.",
+      "Títulos em par: caixa alta condensada em cima, itálico serifado embaixo.",
+      "Tropical Mint como contraluz: botões, rótulos, marcadores, valores, foco.",
+      "Listas e tabelas feitas só de linhas finas (18% de opacidade), sem cartões.",
+      "Cantos arredondados só em pílulas, fotos e painéis de luz; o resto fica reto."
+    ],
+    "rules": [
+      {
+        "name": "The Lit Room Rule",
+        "body": "O índigo vive como luz (gradiente radial `--lit` ou o foco que passeia), não como bloco chapado. O plano em destaque e a faixa do Precifica recebem o mesmo gradiente do topo.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Backlight Rule",
+        "body": "Mint é a única cor de destaque. Laranja (#ff9f6b) e os lilases da barra de custos existem só como cores de dado dentro da calculadora.",
+        "section": "colors"
+      },
+      {
+        "name": "The Paired Title Rule",
+        "body": "Título de seção é sempre o par caixa alta + itálico, nesta ordem; nunca só um dos dois, nunca o itálico em caixa alta.",
+        "section": "typography"
+      },
+      {
+        "name": "The Clean Accent Rule",
+        "body": "A máscara de entrada da caixa alta recorta só por baixo da linha (`clip-path: inset(-0.6em -0.3em -0.3em -0.3em)`), para Ó, Ú, É e Ç passarem inteiros.",
+        "section": "typography"
+      },
+      {
+        "name": "The Light-Not-Shadow Rule",
+        "body": "Para separar um plano do fundo, acenda a luz atrás dele; não projete sombra.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** acender o índigo como luz radial (`--lit`) atrás de topo, plano em destaque, Precifica e fecho.",
+      "**Do** escrever todo título de seção como par Anton em caixa alta + Bodoni Moda itálico.",
+      "**Do** usar pílulas mint (999px, 56px de altura) para toda ação, com seta que anda 5px no hover.",
+      "**Do** organizar listas, tabelas e garantias em linhas finas de 1px a 18%.",
+      "**Do** usar Tropical Mint como a única cor de destaque: rótulos, valores, marcadores, foco.",
+      "**Do** passar toda foto de máquina nova pelo `luz_printers.py` antes de colocar na luz.",
+      "**Do** manter área de toque mínima de 44px em links de texto."
+    ],
+    "donts": [
+      "**Don't** pôr sombra em nada; a profundidade é luz e degradê.",
+      "**Don't** arredondar planos, linhas ou campos; arredondamento é só de pílula, foto e painel de luz.",
+      "**Don't** usar o índigo chapado como fundo de bloco fora do gradiente (exceção: canal ativo da calculadora).",
+      "**Don't** usar o itálico Bodoni em caixa alta, nem o Anton em caixa baixa.",
+      "**Don't** colocar um rótulo pequeno em caixa alta acima de um título como chapéu; o rótulo acompanha o conteúdo (abaixo do título ou como item de lista).",
+      "**Don't** usar o laranja da calculadora fora da barra de custos."
+    ]
+  }
+}

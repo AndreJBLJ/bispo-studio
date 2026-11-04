@@ -6,7 +6,6 @@
   --surface: #0a0a1d;
   --surface-2: #12122c;
   --indigo: #6331fb;
-  --indigo-press: #5426e0;
   --mint: #88f9c0;
   --mint-press: #6fefad;
 
@@ -20,15 +19,11 @@
   --font-display: var(--font-sans), system-ui, sans-serif;
   --font-text: var(--font-sans), system-ui, sans-serif;
 
-  /* Cinco degraus de tipo, e o monumento à parte */
+  /* Degraus de texto usados pela calculadora e pelo corpo */
   --step-small: clamp(0.875rem, 0.85rem + 0.1vw, 0.9375rem);
   --step-body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
-  --step-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
-  --step-head: clamp(2rem, 1.3rem + 3.2vw, 4rem);
-  --step-big: clamp(3.25rem, 1rem + 8vw, 9rem);
 
   --margin: clamp(16px, 2.2vw, 32px);
-  --section-gap: clamp(96px, 12vw, 200px);
 
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
   --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
@@ -173,52 +168,6 @@ input {
 }
 .skip:focus {
   transform: translateY(0);
-}
-
-/* Botão: retângulo chapado, cantos retos, uma cor só. */
-.btn {
-  --btn-bg: var(--mint);
-  --btn-fg: var(--on-mint);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6em;
-  min-height: 52px;
-  padding: 0 24px;
-  background: var(--btn-bg);
-  color: var(--btn-fg);
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1rem;
-  letter-spacing: -0.01em;
-  text-decoration: none;
-  user-select: none;
-  transition:
-    transform 160ms var(--ease-out),
-    background-color 200ms ease;
-}
-.btn:active {
-  transform: scale(0.97);
-}
-@media (hover: hover) and (pointer: fine) {
-  .btn:hover {
-    background: var(--mint-press);
-  }
-  .btn:hover .btn-arrow {
-    transform: translateX(4px);
-  }
-}
-.btn-arrow {
-  transition: transform 200ms var(--ease-out);
-}
-.btn--ghost {
-  --btn-bg: var(--surface-2);
-  --btn-fg: var(--ink);
-}
-@media (hover: hover) and (pointer: fine) {
-  .btn--ghost:hover {
-    background: #1b1b3d;
-  }
 }
 
 /* Entradas de seção: o estado escondido só existe com JavaScript e é aplicado pelo GSAP. */

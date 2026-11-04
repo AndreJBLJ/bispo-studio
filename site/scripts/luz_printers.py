@@ -33,11 +33,20 @@ for n, (name, bg) in src.items():
     edge = ImageChops.subtract(matte, ImageChops.offset(matte, -shift, shift // 2)).filter(ImageFilter.GaussianBlur(shift * 0.9))
     edge = edge.point(lambda v: min(255, int(v * 2.4)))
     rgb = Image.composite(ImageChops.screen(rgb, Image.new('RGB', size, (136, 249, 192))), rgb, edge)
-    glow = ImageChops.offset(matte, shift * 2, 0).filter(ImageFilter.GaussianBlur(shift * 5)).point(lambda v: int(v * 0.7))
     canvas = Image.new('RGBA', (W, H), (0, 0, 0, 0))
     ox, oy = (W - size[0]) // 2, H - size[1]
-    glowL = Image.new('RGBA', size, (136, 249, 192, 0)); glowL.putalpha(glow)
-    canvas.alpha_composite(glowL, (ox, oy))
+    # brilho mint fora do contorno, calculado na tela inteira (sem cortar no retângulo da foto)
+    # e apagado perto das bordas do quadro, para não aparecer caixa nenhuma no fundo índigo
+    full = Image.new('L', (W, H), 0); full.paste(matte, (ox + shift * 2, oy))
+    glow = full.filter(ImageFilter.GaussianBlur(shift * 7)).point(lambda v: int(v * 0.42))
+    fade = Image.new('L', (W, H), 0); fd = ImageDraw.Draw(fade)
+    m = 90
+    for i in range(m):
+        fd.rectangle([i, i, W - 1 - i, H - 1], outline=int(255 * i / m))
+    fd.rectangle([m, m, W - 1 - m, H - 1], fill=255)
+    glow = ImageChops.multiply(glow, fade)
+    glowL = Image.new('RGBA', (W, H), (136, 249, 192, 0)); glowL.putalpha(glow)
+    canvas.alpha_composite(glowL)
     obj = rgb.convert('RGBA'); obj.putalpha(matte)
     canvas.alpha_composite(obj, (ox, oy))
     canvas.save(f'{OUT}/{name}-luz.webp', quality=86, method=6)
