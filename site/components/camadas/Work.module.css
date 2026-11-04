@@ -1,0 +1,172 @@
+.work {
+  padding-top: var(--section-gap);
+}
+
+.head {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 0 24px;
+  align-items: end;
+  padding: 0 var(--margin) clamp(48px, 7vw, 96px);
+}
+.h2 {
+  grid-column: 1 / span 7;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--step-big);
+  line-height: 0.9;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+}
+.headText {
+  grid-column: 9 / span 4;
+  font-size: var(--step-body);
+  max-width: 38ch;
+}
+
+.project {
+  position: relative;
+  height: 200svh;
+}
+
+.stage {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+}
+
+.paneWrap {
+  position: relative;
+  overflow: hidden;
+  background: var(--surface);
+}
+.paneIndigo {
+  background: var(--indigo);
+}
+
+.pane {
+  position: absolute;
+  inset: -11% 0;
+  will-change: transform;
+}
+.pane img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.paneL img {
+  object-position: 50% 12%;
+}
+.paneL::after,
+.paneR:not(:has(canvas))::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(1, 1, 13, 0.42);
+  pointer-events: none;
+}
+
+.titleBox {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 0 var(--margin);
+  pointer-events: none;
+  z-index: 2;
+}
+.plateCard {
+  pointer-events: auto;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: 14px;
+  max-width: min(640px, 92vw);
+  padding: clamp(24px, 3vw, 44px) clamp(20px, 3vw, 48px);
+  background: var(--bg);
+  will-change: transform;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: clamp(2.75rem, 1.2rem + 4.4vw, 6rem);
+  line-height: 0.86;
+  letter-spacing: -0.045em;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.meta {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.0625rem;
+  color: var(--mint);
+}
+.resumo {
+  max-width: 40ch;
+  font-size: var(--step-body);
+  color: var(--ink);
+}
+.visit {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 0 20px;
+  background: var(--mint);
+  color: var(--on-mint);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition:
+    transform 160ms var(--ease-out),
+    background-color 200ms ease,
+    color 200ms ease;
+}
+.visit:active {
+  transform: scale(0.97);
+}
+@media (hover: hover) and (pointer: fine) {
+  .visit:hover {
+    background: var(--mint-press);
+  }
+}
+
+@media (max-width: 759px) {
+  .head {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .h2,
+  .headText {
+    grid-column: 1;
+  }
+  .h2 {
+    font-size: 12.5vw;
+  }
+  .title {
+    font-size: 11vw;
+  }
+  .plateCard {
+    gap: 10px;
+  }
+  .resumo {
+    font-size: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project {
+    height: auto;
+  }
+  .stage {
+    position: relative;
+  }
+}

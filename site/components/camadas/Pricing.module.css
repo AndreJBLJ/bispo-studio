@@ -1,0 +1,272 @@
+.pricing {
+  padding: var(--section-gap) var(--margin) 0;
+}
+
+.h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--step-head);
+  letter-spacing: -0.035em;
+  line-height: 1;
+  margin-bottom: clamp(40px, 5vw, 72px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.names {
+  grid-column: 1 / span 6;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.nameRow {
+  display: block;
+}
+.name {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  gap: 0.25em;
+  width: 100%;
+  padding: 0.08em 0 0.08em 0.5em;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.75rem, 1.2rem + 5vw, 6rem); /* mesmo degrau dos títulos das lojas */
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+  text-align: left;
+  color: var(--muted);
+  transition:
+    color 200ms ease,
+    transform 160ms var(--ease-out);
+}
+.name:active {
+  transform: scale(0.99);
+}
+.name[aria-selected="true"] {
+  color: var(--ink);
+}
+@media (hover: hover) and (pointer: fine) {
+  .name:hover {
+    color: var(--ink);
+  }
+}
+.dot {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0.24em;
+  height: 0.24em;
+  margin-top: -0.12em;
+  background: var(--mint);
+  opacity: 0;
+  transform: scale(0.5);
+  transition:
+    transform 260ms var(--ease-out),
+    opacity 200ms ease;
+}
+.name[aria-selected="true"] .dot {
+  opacity: 1;
+  transform: scale(1);
+}
+.flag {
+  font-family: var(--font-text);
+  font-weight: 400;
+  font-size: var(--step-small);
+  letter-spacing: 0;
+  color: var(--mint);
+  margin-left: 0.6em;
+  white-space: nowrap;
+  align-self: center;
+}
+.namesNote {
+  margin-top: auto;
+  padding-top: 32px;
+  max-width: 40ch;
+  color: var(--muted);
+  font-size: var(--step-small);
+}
+
+.stage {
+  grid-column: 7 / span 6;
+  background: var(--indigo);
+  color: var(--on-indigo);
+  padding: clamp(24px, 3vw, 48px);
+  min-height: 640px;
+  position: relative;
+  overflow: hidden;
+}
+.stageInner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+}
+.from {
+  font-size: var(--step-small);
+  color: var(--on-indigo-muted);
+}
+.price {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(3.5rem, 1.5rem + 6vw, 8rem);
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+}
+.cur {
+  font-size: 0.4em;
+  letter-spacing: -0.02em;
+  margin-right: 0.15em;
+  vertical-align: 0.95em;
+}
+.monthly {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--mint);
+}
+.specs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  padding: 16px 0;
+}
+.specs dt {
+  font-size: var(--step-small);
+  color: var(--on-indigo-muted);
+}
+.specs dd {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.0625rem;
+  line-height: 1.25;
+}
+.paraQue {
+  font-size: var(--step-lead);
+  line-height: 1.3;
+  max-width: 30ch;
+}
+.inclui {
+  display: grid;
+  gap: 8px;
+}
+.inclui li {
+  position: relative;
+  padding-left: 22px;
+}
+.inclui li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 10px;
+  height: 10px;
+  background: var(--mint);
+}
+.cta {
+  align-self: flex-start;
+  margin-top: 8px;
+}
+
+.inlineStage {
+  display: none;
+}
+
+.below {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+  margin-top: 24px;
+}
+.monthlyBox {
+  grid-column: span 6;
+  background: var(--surface);
+  padding: clamp(24px, 3vw, 40px);
+  display: grid;
+  gap: 16px;
+  align-content: start;
+}
+.monthlyBox:first-child {
+  grid-column: 7 / span 6;
+  grid-row: 1;
+}
+.monthlyBox:last-child {
+  grid-column: 1 / span 6;
+  grid-row: 1;
+}
+.h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--step-lead);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+.covers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.covers li {
+  background: var(--surface-2);
+  padding: 8px 14px;
+  font-size: var(--step-small);
+}
+.bonus a {
+  color: var(--mint);
+}
+
+.table {
+  margin-top: clamp(64px, 7vw, 112px);
+}
+@media (max-width: 699px) {
+  .table {
+    display: none;
+  }
+}
+
+@media (max-width: 859px) {
+  .names {
+    grid-column: 1 / -1;
+  }
+  .name {
+    font-size: 12vw;
+  }
+  .stage {
+    display: none;
+  }
+  .inlineStage {
+    display: block;
+    background: var(--indigo);
+    color: var(--on-indigo);
+    padding: 24px 20px;
+    margin: 8px calc(var(--margin) * -1) 16px;
+  }
+  .inlineStage .price {
+    font-size: 20vw;
+  }
+  .specs {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cta {
+    width: 100%;
+  }
+  .monthlyBox,
+  .monthlyBox:first-child,
+  .monthlyBox:last-child {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+  .flag {
+    display: none;
+  }
+}

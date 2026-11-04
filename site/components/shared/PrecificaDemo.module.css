@@ -1,0 +1,234 @@
+.ui {
+  --ui-bg: var(--bg);
+  --ui-field: var(--surface-2);
+  --ui-ink: var(--ink);
+  --ui-muted: var(--muted);
+  background: var(--ui-bg);
+  color: var(--ui-ink);
+  font-family: var(--font-display);
+  font-weight: 700;
+  padding: clamp(18px, 2.4vw, 32px);
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  width: 100%;
+  min-height: 100%;
+}
+
+.onIndigo {
+  --ui-bg: var(--bg);
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.app {
+  font-size: 1.125rem;
+  letter-spacing: -0.02em;
+}
+.note {
+  font-family: var(--font-text);
+  font-weight: 400;
+  font-size: var(--step-small);
+  color: var(--ui-muted);
+}
+
+.canais {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  background: var(--ui-field);
+  padding: 6px;
+}
+.canal {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  min-height: 52px;
+  padding: 8px 12px;
+  text-align: left;
+  font-size: 0.9375rem;
+  color: var(--ui-muted);
+  transition:
+    background-color 200ms ease,
+    color 200ms ease,
+    transform 160ms var(--ease-out);
+}
+.canal:active {
+  transform: scale(0.97);
+}
+.canal[data-on] {
+  background: var(--indigo);
+  color: var(--on-indigo);
+}
+.canalTaxa {
+  font-family: var(--font-text);
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+
+.campos {
+  display: grid;
+  gap: 16px;
+}
+.campo {
+  display: grid;
+  gap: 8px;
+}
+.campoHead {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 0.9375rem;
+}
+.campoHead label {
+  color: var(--ui-muted);
+}
+.campoHead output {
+  color: var(--ui-ink);
+}
+
+.campo input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 28px;
+  margin: 0;
+  background: transparent;
+  cursor: pointer;
+  touch-action: pan-y;
+}
+.campo input[type="range"]::-webkit-slider-runnable-track {
+  height: 8px;
+  /* taste-skill-ignore: preenchimento chapado do controle deslizante (data-ui) */
+  background: linear-gradient(var(--mint), var(--mint)) 0 / var(--p) 100% no-repeat, var(--ui-field); /* taste-skill-ignore */
+}
+.campo input[type="range"]::-moz-range-track {
+  height: 8px;
+  background: var(--ui-field);
+}
+.campo input[type="range"]::-moz-range-progress {
+  height: 8px;
+  background: var(--mint);
+}
+.campo input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  margin-top: -7px;
+  background: var(--ui-ink);
+  border: 0;
+  transition: transform 160ms var(--ease-out);
+}
+.campo input[type="range"]::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  background: var(--ui-ink);
+  border: 0;
+  border-radius: 0;
+}
+.campo input[type="range"]:active::-webkit-slider-thumb {
+  transform: scale(1.15);
+}
+.campo input[type="range"]:focus-visible {
+  outline: 3px solid var(--mint);
+  outline-offset: 2px;
+}
+
+.result {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+.precoBox {
+  display: grid;
+  gap: 2px;
+}
+.precoLabel {
+  font-size: 0.9375rem;
+  color: var(--ui-muted);
+}
+.preco {
+  font-size: clamp(2.5rem, 1.6rem + 2.6vw, 3.75rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--mint);
+}
+.mini {
+  display: grid;
+  gap: 4px;
+  text-align: right;
+  font-size: 0.9375rem;
+  color: var(--ui-muted);
+}
+.mini span span {
+  color: var(--ui-ink);
+}
+.mini .lucro {
+  color: var(--mint);
+}
+
+.bar {
+  position: relative;
+  height: 18px;
+  background: var(--ui-field);
+  overflow: hidden;
+}
+.seg {
+  position: absolute;
+  inset: 0;
+  transform-origin: 0 50%;
+  transition: transform 520ms var(--ease-out);
+}
+.sFil {
+  background: var(--ink);
+}
+.sEne {
+  background: #b9b7e0;
+}
+.sMaq {
+  background: #7a77b8;
+}
+.sTax {
+  background: #ff9f6b;
+}
+.sLuc {
+  background: var(--mint);
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  font-family: var(--font-text);
+  font-weight: 400;
+  font-size: var(--step-small);
+  color: var(--ui-muted);
+}
+.legend li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.legend li span:last-child {
+  color: var(--ui-ink);
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  flex: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .seg {
+    transition: none;
+  }
+}
