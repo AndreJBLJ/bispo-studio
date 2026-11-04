@@ -30,8 +30,8 @@
 .bMask {
   display: block;
   overflow: hidden;
-  padding: 0.14em 0 0.1em;
-  margin: -0.14em 0 -0.1em;
+  padding: 0.2em 0 0.1em;
+  margin: -0.2em 0 -0.1em;
 }
 .b {
   display: block;
@@ -305,20 +305,18 @@
   width: 46vw;
   height: 70vh;
   margin-left: -16vw;
-  background: radial-gradient(ellipse at center, rgba(136, 249, 192, 0.55) 0%, rgba(136, 249, 192, 0) 62%);
+  background: radial-gradient(ellipse at center, rgba(136, 249, 192, 0.7) 0%, rgba(136, 249, 192, 0) 60%);
 }
 .subjectImg {
   position: absolute;
   left: 50%;
   bottom: 0;
-  width: min(52vw, 820px);
-  height: 94%;
-  margin-left: max(-26vw, -410px);
+  width: min(50vw, 780px);
+  height: 86%;
+  margin-left: max(-25vw, -390px);
   object-fit: contain;
   object-position: 50% 100%;
   mix-blend-mode: multiply;
-  -webkit-mask-image: radial-gradient(ellipse 64% 70% at 50% 60%, #000 52%, transparent 80%);
-  mask-image: radial-gradient(ellipse 64% 70% at 50% 60%, #000 52%, transparent 80%);
 }
 
 .heroTitle {
@@ -1038,14 +1036,15 @@
     padding: 104px 16px 32px;
   }
   .subject {
-    inset: 0;
+    inset: 0 0 auto 0;
+    height: 100svh;
   }
   .subjectImg {
-    width: 92vw;
-    height: 58%;
-    top: 22%;
+    width: 96vw;
+    height: 60%;
+    top: 20%;
     bottom: auto;
-    margin-left: -46vw;
+    margin-left: -48vw;
   }
   .rim {
     width: 90vw;

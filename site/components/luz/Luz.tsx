@@ -24,14 +24,14 @@ import s from "./luz.module.css";
 gsap.registerPlugin(ScrollTrigger);
 
 /**
- * Fotos que revezam no centro do topo. Fundo branco funciona sem recorte: o filtro multiplica a foto pela luz
- * índigo, então o branco vira a própria luz e só a peça (ou a impressora) aparece.
- * Para trocar pelas impressoras: coloque os arquivos em public/impressoras/ e liste aqui.
+ * Impressoras que revezam no centro do topo (public/impressoras/, 1300 × 1625, fundo branco puro, apoiadas na base
+ * do quadro). Não precisa recortar: o filtro multiplica a foto pela luz índigo, então o branco vira a própria luz
+ * e só a impressora aparece. Para trocar, mantenha o mesmo formato e liste aqui.
  */
 const FOTOS_TOPO = [
-  { src: "/portfolio/tcg-luffy-gear5.webp", alt: "Deck box do Luffy Gear 5 impressa em 3D" },
-  { src: "/portfolio/torsa-01-desligado.webp", alt: "Abajur Torsa impresso em 3D" },
-  { src: "/portfolio/tcg-mana.webp", alt: "Deck box de Magic impressa em 3D" },
+  { src: "/impressoras/bambu-h3c.webp", alt: "Impressora 3D Bambu Lab H3C com o sistema de filamentos no topo" },
+  { src: "/impressoras/creality-k1c.webp", alt: "Impressora 3D Creality K1C imprimindo uma peça" },
+  { src: "/impressoras/bambu-a1-mini.webp", alt: "Impressora 3D Bambu Lab A1 mini imprimindo um vaso" },
 ];
 
 const Arrow = () => (
